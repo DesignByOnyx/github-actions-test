@@ -1,6 +1,6 @@
 name: Build and Test 1
 
-on: [push, pull_request]
+on:
   pull_request:
     paths: ['packages/*']
 
