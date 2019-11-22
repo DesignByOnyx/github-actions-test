@@ -1,0 +1,22 @@
+name: Build and Test
+
+on: [push, pull_request]
+#  pull_request:
+#    paths: ['packages/*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: npm install yarn lerna -g
+      - run: yarn
+      - run: yarn test
+        env:
+          CI: true
