@@ -2,7 +2,7 @@ name: Build and Test 1
 
 on:
   pull_request:
-    paths: ['packages/*']
+    paths: ['packages/**/*']
 
 jobs:
   build:
