@@ -4,7 +4,8 @@
   "description": "Sample repo for testing github actions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Tests ran successfully!\""
+    "test": "echo \"Tests ran successfully!\"",
+    "build": "echo \"Build script ran!\""
   },
   "repository": {
     "type": "git",

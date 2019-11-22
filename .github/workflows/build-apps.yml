@@ -1,0 +1,22 @@
+name: Build Apps
+
+on:
+  pull_request:
+    paths: ['apps/**/*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: npm install yarn lerna -g
+      - run: yarn
+      - run: yarn build
+        env:
+          CI: true
