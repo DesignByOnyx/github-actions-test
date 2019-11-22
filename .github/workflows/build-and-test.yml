@@ -1,8 +1,8 @@
 name: Build and Test 1
 
-on: [push, pull_request]
-#  pull_request:
-#    paths: ['packages/*']
+on:
+  pull_request:
+    paths: ['packages/*']
 
 jobs:
   build:
